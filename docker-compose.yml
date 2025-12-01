@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: dwes2025
+      MYSQL_DATABASE: fruteria
+      MYSQL_USER: alumno
+      MYSQL_PASSWORD: alumno123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
